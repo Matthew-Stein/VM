@@ -1,2 +1,18 @@
-#An initialization of a git repository from my Ubuntu VM.
-#might be used in PCFC -- Practical Computing for Biologists
+Repository from my Ubuntu VM. Learning the ropes.
+Will be used in PCFC -- Practical Computing for Biologists
+
+Ch4: Command Line Operations
+
+Trying to call 'My Folder' will make the terminal search for
+a directory called 'My' putting 'My\ Folder' tells it to include
+the space in the full name.
+(Review from REGEXs in ATBS and this book.)
+
+Better just to avoid spaces and/or use _ instead.
+ls -a nad ls -l both show signficantly more information.
+ls -l is especially useful since it displays PERMISSIONS
+
+Chapter 5: Handling text in the shell
+> cat, grep, piping, etc.
+> Using curl to grab from URL's
+  Potentially flawed due to updated web security.
