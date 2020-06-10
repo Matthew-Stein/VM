@@ -1,0 +1,10 @@
+-rw-rw-rw- 1 matt matt 526 Jun  6 18:47 FEC00001_1.seq
+-rw-rw-rw- 1 matt matt 602 Jun  6 18:47 FEC00002_1.seq
+-rw-rw-rw- 1 matt matt 540 Jun  6 18:47 FEC00003_1.seq
+-rw-rw-rw- 1 matt matt 624 Jun  6 18:47 FEC00004_1.seq
+-rw-rw-rw- 1 matt matt 492 Jun  6 18:47 FEC00005_1.seq
+-rw-rw-rw- 1 matt matt 550 Jun  6 18:47 FEC00005_2.seq
+-rw-rw-rw- 1 matt matt 497 Jun  6 18:47 FEC00006_1.seq
+-rw-rw-rw- 1 matt matt 457 Jun  6 18:47 FEC00007_1.seq
+-rw-rw-rw- 1 matt matt 503 Jun  6 18:47 FEC00007_2.seq
+-rw-rw-rw- 1 matt matt 571 Jun  6 18:47 FEC00007_3.seq
