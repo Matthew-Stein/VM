@@ -16,3 +16,22 @@ Chapter 5: Handling text in the shell
 > cat, grep, piping, etc.
 > Using curl to grab from URL's
   Potentially flawed due to updated web security.
+
+Chapter 6: Scripting with the shell
+> making a script
+	any text editor, save as .sh
+	add #! /bin/bash to first line for any bash script
+	save in the home/matt/scripts folder
+	then change permission: chmod u+x 'scriptname'.sh
+	Now you can call on it anywhere. 
+	
+> Find and replace in Atom > click regex button then ^ for start of lines, 
+$ for end of lines. Use find and replace to hearts content.
+> Use $1 , $2, etc instead of \1 \2 for captured groups replacement. 
+> didnt do the section on grabbing reference info with curl in a script, 
+due to permission/ id stuff. 
+
+Chapter 7-13 : Python Programming 
+Due to just having finished ATBS. Will just skim and write the occasional note
+here. If anything intersting pops up I will go through it. 
+
