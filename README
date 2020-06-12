@@ -23,15 +23,48 @@ Chapter 6: Scripting with the shell
 	add #! /bin/bash to first line for any bash script
 	save in the home/matt/scripts folder
 	then change permission: chmod u+x 'scriptname'.sh
-	Now you can call on it anywhere. 
-	
-> Find and replace in Atom > click regex button then ^ for start of lines, 
+	Now you can call on it anywhere.
+
+> Find and replace in Atom > click regex button then ^ for start of lines,
 $ for end of lines. Use find and replace to hearts content.
-> Use $1 , $2, etc instead of \1 \2 for captured groups replacement. 
-> didnt do the section on grabbing reference info with curl in a script, 
-due to permission/ id stuff. 
+> Use $1 , $2, etc instead of \1 \2 for captured groups replacement.
+> didnt do the section on grabbing reference info with curl in a script,
+due to permission/ id stuff.
 
-Chapter 7-13 : Python Programming 
+Chapter 7-13 : Python Programming
 Due to just having finished ATBS. Will just skim and write the occasional note
-here. If anything intersting pops up I will go through it. 
+here. If anything intersting pops up I will go through it.
 
+Chapter 7 Notes:
+Calling env to raise python instead of direct is Better
+#! /usr/bin/env python
+
+Objects - super variables. With nested information in dot notation
+ex. MyBike = object
+    MyBike.Colour
+    MyBike.Tires
+    MyBike.Tires.Pressure
+    etc etc.
+    Methods (functions) can also be within this nest heirarchy
+    MyBike.Steer(-4) #Steer to the left 4 degrees.
+
+Chapter 8 Notes:
+Nano:
+  Alt ^ = copy
+  shift U = paste
+When using % placeholders: control interpretation with:
+  %s = string, %d = integer, %f = float
+  a dot then number put nex to % will round/show number of digits
+  ex. %.2f - round float to 2 digits
+Integer padding %5d will align right with space if the number is larger
+ - for aligning outputs of different lengths.
+
+Chapter 9 Notes:
+type python to work directly in python console
+REGEX:  [\w\s]+ - any number of words separated by spaces
+        [A-Z]{3} - and combo of 3 letters
+
+Chapter 10 Notes: Reading and Writing Files
+use regex in python by first importing re
+'import re'
+END pg 185
