@@ -1,7 +1,7 @@
 #! /usr/bin/env python
-""" 
+"""
 mylatlon_4.py
-import latitude longitude records from a text file, 
+import latitude longitude records from a text file,
 format them into an SQL command, and enter the records into a database
 """
 
@@ -39,10 +39,10 @@ InFile = open(InFileName, 'r')
 LineNumber = 0
 
 # Create the database connection
-# Often you will want to use a variable instead of a fixed string 
+# Often you will want to use a variable instead of a fixed string
 # for the database name
 MyConnection = MySQLdb.connect( host = "localhost", user = "root", \
-     passwd = "", db = "midwater")
+     passwd = "stein", db = "midwater")
 MyCursor = MyConnection.cursor()
 
 # Loop over each line in the file
@@ -55,28 +55,28 @@ for Line in InFile:
 		 # Split the line into a list of ElementList, using tab as a delimiter
 		 ElementList = Line.split('\t')
 		 # Returns a list in this format:
-		 # ['Tiburon 596', '19-Jul-03', '36 36.12 N', '122 22.48 W', 
+		 # ['Tiburon 596', '19-Jul-03', '36 36.12 N', '122 22.48 W',
 		 # '1190', 'holotype']
-		
+
 		 Dive    = ElementList[0] # includes vehicle and dive number
 		 Date    = ElementList[1]
 		 Depth   = float(ElementList[4])
 		 Comment = ElementList[5]
-		
+
 		 LatDegrees = decimalat(ElementList[2])
 		 LonDegrees = decimalat(ElementList[3])
-		
+
 		 #Isolate the vehicle and dive number from the Dive field
 		 SearchStr='(.+?) (\d+)'
 		 Result = re.search(SearchStr, Dive)
 		 Vehicle = Result.group(1)
 		 DiveNum = int(Result.group(2))
-		
+
 		 #Reformat date
 		 # Create a datetime object from a string
-		 DateParsed = datetime.strptime(Date, "%d-%b-%y") 
+		 DateParsed = datetime.strptime(Date, "%d-%b-%y")
 		 # Create a string from a datetime object
-		 DateOut = DateParsed.strftime("%Y-%m-%d") 
+		 DateOut = DateParsed.strftime("%Y-%m-%d")
 		 #print Vehicle, DiveNum, DateOut, LatDegrees, LonDegrees, Depth, Comment
 		 SQL = """INSERT INTO specimens SET
   vehicle='%s',
@@ -94,8 +94,7 @@ for Line in InFile:
 # Close the files
 InFile.close()
 MyCursor.close()
-# The .commit() command below is not in the printed book. 
+# The .commit() command below is not in the printed book.
 # It is needed by some installations to make the changes stick
 MyConnection.commit()
 MyConnection.close()
-

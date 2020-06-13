@@ -1,0 +1,7 @@
+LOAD DATA LOCAL INFILE '/VM/pcfb/examples/ctd/Marrus_ctdTib515.txt' INTO TABLE ctd FIELDS TERMINATED BY ',' IGNORE 1 LINES (clock,vehicle,depth,temperature,salinity,oxygen,lat,lon) SET dive = 515;
+LOAD DATA LOCAL INFILE '/VM/pcfb/examples/ctd/Marrus_ctdTib531.txt' INTO TABLE ctd FIELDS TERMINATED BY ',' IGNORE 1 LINES (clock,vehicle,depth,temperature,salinity,oxygen,lat,lon) SET dive = 531;
+LOAD DATA LOCAL INFILE '/VM/pcfb/examples/ctd/Marrus_ctdTib547.txt' INTO TABLE ctd FIELDS TERMINATED BY ',' IGNORE 1 LINES (clock,vehicle,depth,temperature,salinity,oxygen,lat,lon) SET dive = 547;
+LOAD DATA LOCAL INFILE '/VM/pcfb/examples/ctd/Marrus_ctdTib596.txt' INTO TABLE ctd FIELDS TERMINATED BY ',' IGNORE 1 LINES (clock,vehicle,depth,temperature,salinity,oxygen,lat,lon) SET dive = 596;
+LOAD DATA LOCAL INFILE '/VM/pcfb/examples/ctd/Marrus_ctdVen1575.txt' INTO TABLE ctd FIELDS TERMINATED BY ',' IGNORE 1 LINES (clock,vehicle,depth,temperature,salinity,oxygen,lat,lon) SET dive = 1575;
+LOAD DATA LOCAL INFILE '/VM/pcfb/examples/ctd/Marrus_ctdVen1777.txt' INTO TABLE ctd FIELDS TERMINATED BY ',' IGNORE 1 LINES (clock,vehicle,depth,temperature,salinity,oxygen,lat,lon) SET dive = 1777;
+LOAD DATA LOCAL INFILE '/VM/pcfb/examples/ctd/Marrus_ctdVen2243.txt' INTO TABLE ctd FIELDS TERMINATED BY ',' IGNORE 1 LINES (clock,vehicle,depth,temperature,salinity,oxygen,lat,lon) SET dive = 2243;

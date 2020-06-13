@@ -128,3 +128,84 @@ Chapter guides when to combine which tool:
   Notes, exact programs used, scripts saved, etc.
 
 Ch 15 Notes: Relational Databases
+> Data organization: Every Row should have all the information
+  Full square blocks of full grids of info. Not some with some columns others
+  without.
+    Exactly how R works with data, how Numpy prefers, etc.
+    One large grid with single header.
+    Raw, unprocessed data entry in the spreadsheets.
+> Moving beyond two-dimensional grids:
+    Some datasets not well suited for 2d arrays, ex Phylogenies.
+    Option: Complex (text based) dataset format:XML - most widely used.
+        Not covered in this book.
+Relational Databases:
+  Relational Database Management System (RDBMS) - continuously running
+  server program that manages 1 or more databases.
+  Ex. FileMaker, MS Access, Oracle, etc.
+  Open Source options: MySQL, PostgreSQL, SQLite.
+  All use Structured Query Language (SQL) - learn once, can use most db software
+  R, Python, Matlab, and web servers can all interact directly with SQL DBs
+  >These are primarily for LARGE scale projects. Kind of overkill for smaller
+  personal projects or one-off analyses.
+
+  One RDBMS server can hold any number of databases, which in turn contains
+  two-dimensional arrays/tables that hold the actual data.
+
+  >When creating a table, one column will be designated the 'primary key'
+  for that table, and row queries are based off that key column.
+
+MYSQL: (Basics)
+Enter mysql:
+  'mysql -u root -p'
+  (password)
+Test if running: 'systemctl status mysql.service'
+if not running: 'sudo systemctl start mysql'
+Alt w/ version: 'sudo mysqladmin -p -u root version'
+
+Dont ever ctrl-c in MySQL - terminates the server. use \c instead.
+Inside MySQL:
+    SHOW DATABASES;
+    HELP;
+    EXIT;
+    CREATE DATABASE <name>; #ex. midwater
+    USE <name> ; #selects it - now everything commands just that database
+    CREATE TABLE <name> (list coloums in the brackets)
+    ex. CREATE TABLE  specimens (specimen_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY, )
+    # that gets the primary key requirement out of the way without fucking with it too much
+    then you add all the other columns and what type of data they are.
+    format: <name> TYPE,
+    DESCRIBE <table>; #shows info about the table
+    SHOW TABLES; and DESCRIBE <table> are the ls of mysql - navigation
+
+    Inserting data by hand:
+    INSERT INTO specimens set
+    vehicle = 'Tiburon',
+    dive = 596,
+    etc etc. Need to be in the format described in DESCRIBE <table>
+
+    Viewing data:
+      SELECT * FROM specimens; #prints out the table in terminal
+
+
+      #The described script to add the data to the database doesnt work.
+      ?
+
+      Other methods worked out.
+
+    Modifying SQL tables:
+      UPDATE ctd SET vehicle='TIBURON' WHERE vehicle='tibr';
+
+Skimmed over the last third of chapter. If I need to use SQL in future,
+this is a great resource. But for now will pass.
+  Most of the datasets I could be working with soon are much smaller than most
+  that would require heavy SQL use.
+
+Chapter 16 Notes: Advanced Shell and Pipelines
+review - cat and grep
+  head and tail for just the top and just the bottom
+  piping one into another. ex. history | tail -n -15
+> cut - extracts just certain columns from a file.
+  -f indicates a range of columns
+ex head -n 20 /vm/pcfb/examples/ctd.txt | cut -f 5,7,9 -d
+> uniq - finds number of unique instances of a value
+END pg 303
