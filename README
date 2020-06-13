@@ -66,5 +66,65 @@ REGEX:  [\w\s]+ - any number of words separated by spaces
 
 Chapter 10 Notes: Reading and Writing Files
 use regex in python by first importing re
-'import re'
-END pg 185
+'import re' #just review from ATBS
+"36 36.12 N" - regex match: ()\d+) ([\d\.]+) (\w)
+remember r".." to read as raw text and escape the multiple \\ trap.
+>review of functions
+>translating to a .kml file - mostly skipped for now. Google earth datatype
+
+Chapter 11 Notes: Merging files
+> I dont really understand sys.argv
+  >I kind of understand sys.argv  - to get the user to use arguments when
+  calling script.
+  Providing feedback with sys.stderr.write() so that the user knows whats
+  happening but the output file doesnt get cluttered with log info.
+>This chapter was so unpleasant.
+
+Chapter 12:Modules and Libraries
+> importing compenents from modules ex. from sys import argv
+    Allows you to not need to do dot notation all the time.
+    can just argv instead of sys.argv
+> can also: from sys import *
+  but kinda sketchy cause you might use one of those terms by accident.
+> urllib - smarter curl
+> os.popen("...").read() - can send terminal commands from inside python script
+Numpy:
+  MyArray = array([[1,2,3],[4,5,6],[7,8,9]])
+  MyArray
+  MyRow = MyArray[1,:]
+  MyRow
+  MyArray[:2,:2]
+#### Ubunto vm has python 2 and 3
+Remmber to call python3 when meaning to
+  ex. anything with biopython
+Extensive Biopython tutorial: tinyurl.com/pcfb-biopy
+>making you own modules by saving codeblock as a .py file
+import the .py file, and then can use def defined modules in code
+just like if they were defined in the current program.
+
+Chapter 13: debugging strategies
+> never work on an un-backed up dataset (straightforward)
+>triple quotes """ ... """ is how to do block commenting - both for more
+documentation or for commenting out large section for testing.
+> print statments to error check
+>Rubber duck debugging - remember the concept of handing down a package
+to each chunk of code
+
+
+Chapter 14: Combining Methods
+>wget - another curl type alternative? Better for what usecase?
+  Book says Linux-specific
+Tools so far:
+  REGEXs
+  Shell commands
+  Shell scripts
+  Python Programs
+Chapter guides when to combine which tool:
+>multiple flowcharts for different circumstances:
+      Data from internet/programs/hardware
+      Parsing one set of text Files
+      parsing many text files
+>Best Practice: Keep a Detailed record of what you have done. Esp in science.
+  Notes, exact programs used, scripts saved, etc.
+
+Ch 15 Notes: Relational Databases
