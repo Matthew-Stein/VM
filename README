@@ -208,4 +208,40 @@ review - cat and grep
   -f indicates a range of columns
 ex head -n 20 /vm/pcfb/examples/ctd.txt | cut -f 5,7,9 -d
 > uniq - finds number of unique instances of a value
-END pg 303
+
+Combining advanced shell functions.
+>head -n 2 *.pdb - grabs the top 2 lines of any .pdb file
+>grep ATOM structure_1gfl.pdb | grep -v REMARK
+    Grabs lines with ATOM them removes lines that contain REMARK
+    > Can get lots of processing in single lines:
+    grep ATOM structure_1gfl.pdb | grep -v REMARK | cut -c 18-21,24-26
+    | sort|uniq| cut -f 1 -d " " |uniq -c |sort -nr
+
+Aliases - can be created as sort of mini functions that you can call again with
+a keyword (alias) - only temporary until you save them it the .bashrc setting file.
+
+Functions -can also be made, with series of commands sequentially like a program
+these also need to be saves in .bashrc (or .bash_profile? maybe just osx)
+ $1,$2 etc become user defined variables that you can include values of when
+ running the functions.
+ ex. repeater(){
+> echo "$1 is what you said first"
+> echo "$@ is everything you said"
+> }
+then can use: repeater 1 2 3
+Always need to supply the arguments/inputs
+- Great for frequently used shell commands
+Note: Indendation does nothing in the shell. dont use tabs.
+> pg 314+ - Many examples of potential functions here.
+
+Wrappers - control and expand functionality of other programs.
+  Ex. combination of python and shell commands.
+    Exploring this stitching togther of programs and in/outputs is what is
+    reffered to as a Pipeline.
+Pipelines- great to ensure no user error in replicating inputs
+        - faster for redoing processes
+        - good record of what I have done.
+        review: API's are what aid program to program connections.
+
+Part V: Graphics
+Chapter 17: Graphical Concepts
