@@ -245,3 +245,8 @@ Pipelines- great to ensure no user error in replicating inputs
 
 Part V: Graphics
 Chapter 17: Graphical Concepts
+
+> .pdf's are vector files. Makes sense but never thought about it.
+Dpi: ~100 for screens, ~300 printed, ~600 for b&w printed
+Adjust images then resize, dont adjust a resized image.
+ 
