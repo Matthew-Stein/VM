@@ -249,4 +249,62 @@ Chapter 17: Graphical Concepts
 > .pdf's are vector files. Makes sense but never thought about it.
 Dpi: ~100 for screens, ~300 printed, ~600 for b&w printed
 Adjust images then resize, dont adjust a resized image.
- 
+
+Chapter 18: Working with vector art
+pg 346 - instructions on how to export charts and outputs from R and Matlab
+in a pdf (vector) format - so that it can be infinitely resized.
+(way better than the png cuts that would take in the past)
+>Inkscape - free open source vector art tool .
+
+Skimmed over the rest of the chapter and chapter 19. Simple image stuff.
+some talk of GIMP, some of photography. A little command line tool that could
+be useful if i have to rotate or crop a TON of images.
+  Pretty useless for small quantities.
+
+Part IV: Advanced topics
+Chapter 20: Working on remote computers.
+>ssh talk - how server connections work.
+
+Starting jobs/programs in the backgroud by adding '&' to the end of your command
+  Will immediately get terminal access back and program will run unattended.
+  Background task will still be quit if you exit the terminal though.
+
+Commands ps or top will show the active processes going on. So you can see if a
+job has finished in the background.
+Ctrl-z will suspend a running program.
+jobs -  will show background processes
+bg # - bg then the number referring to a suspended job will send it to the
+background.
+bg for background, can also do reverse with fg sending to foreground.
+kill - will nuke a program that isnt terminating. Last ditch command.
+
+keeping longterm jobs alive:
+    nohup command (no hangup)
+  ex: nohup <full command> >2 /dev/null < /dev/null &
+    Runs your command in background, even if you log out, and will send error
+    or print statements/whatever to an imaginary directory
+Can even suspend, bg a program, then use disown -h to make an existing job a
+nohup job.
+
+>basics on server setup.
+
+Chapter 21: Installing software.
+Human-read and written code is the sourcecode, passed to a compiler that translates
+it to the machine-code binary that the actual hardware runs on.
+
+Chapter 22: Electronics - interacting with the physical world.
+Abundance of microcontrollers have made individual curcuit and chip building be
+ no longer necessary for the vast majority of use-cases.
+
+Arduino's are the king of standardized boards. Also Raspberry Pi's etc.
+> Good basis to start thinking about arduinos (if i had one) Without having one
+or needing to use one this section is kind of useless.
+
+> look into getting a Raspberrypi or arduino for tinkering. Some are Very cheap.
+
+END of main book:
+
+Appendices are great for reference. Usful shell commands, reference tables etc.
+Should cut out and add to programming resources folder or something.
+
+Finished course June 23 2020.
